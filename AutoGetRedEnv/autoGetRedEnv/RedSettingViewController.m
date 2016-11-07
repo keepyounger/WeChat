@@ -91,8 +91,11 @@ static RedSettingViewController *_sharedInstance = nil;
         [class5 jr_swizzleMethod:@selector(viewDidLoad) withMethod:@selector(xy_viewDidLoad) error:nil];
         [class5 jr_swizzleMethod:@selector(popSelf) withMethod:@selector(xy_popSelf) error:nil];
         
-//        [UINavigationController jr_swizzleMethod:@selector(pushViewController:animated:) withMethod:@selector(xy_pushViewController:animated:) error:nil];
+        //MMFavCellComponent
+        Class class6 = objc_getClass("MMFavCellComponent");
+        [class6 jr_swizzleMethod:@selector(setFavItem:) withMethod:@selector(xy_setFavItem:) error:nil];
         
+//        [UINavigationController jr_swizzleMethod:@selector(pushViewController:animated:) withMethod:@selector(xy_pushViewController:animated:) error:nil];
     });
 }
     
@@ -199,7 +202,6 @@ static RedSettingViewController *_sharedInstance = nil;
 //- (void)xy_pushViewController:(UIViewController *)vc animated:(BOOL)animated
 //{
 //    [self xy_pushViewController:vc animated:animated];
-//    
 //}
 //
 //@end

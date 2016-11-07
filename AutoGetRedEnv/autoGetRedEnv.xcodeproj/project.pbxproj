@@ -14,6 +14,8 @@
 		5AE3A41F1DCEF3ED002A94C9 /* RedBag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE3A41E1DCEED48002A94C9 /* RedBag.storyboard */; };
 		5AE3A4221DCEFB87002A94C9 /* UIView+RedBag.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE3A4201DCEFB87002A94C9 /* UIView+RedBag.h */; };
 		5AE3A4231DCEFB87002A94C9 /* UIView+RedBag.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE3A4211DCEFB87002A94C9 /* UIView+RedBag.m */; };
+		B05C1FF61DD05AE100BDDCDB /* UITableViewCell+ForwordFriendsCircle.h in Headers */ = {isa = PBXBuildFile; fileRef = B05C1FF41DD05AE100BDDCDB /* UITableViewCell+ForwordFriendsCircle.h */; };
+		B05C1FF71DD05AE100BDDCDB /* UITableViewCell+ForwordFriendsCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = B05C1FF51DD05AE100BDDCDB /* UITableViewCell+ForwordFriendsCircle.m */; };
 		B0B7818F1DCC253B00B1109D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B7818E1DCC253B00B1109D /* main.m */; };
 		B0B781921DCC253B00B1109D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B781911DCC253B00B1109D /* AppDelegate.m */; };
 		B0B781951DCC253B00B1109D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B781941DCC253B00B1109D /* ViewController.m */; };
@@ -47,6 +49,8 @@
 		5AE3A41E1DCEED48002A94C9 /* RedBag.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RedBag.storyboard; sourceTree = "<group>"; };
 		5AE3A4201DCEFB87002A94C9 /* UIView+RedBag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RedBag.h"; sourceTree = "<group>"; };
 		5AE3A4211DCEFB87002A94C9 /* UIView+RedBag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RedBag.m"; sourceTree = "<group>"; };
+		B05C1FF41DD05AE100BDDCDB /* UITableViewCell+ForwordFriendsCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ForwordFriendsCircle.h"; sourceTree = "<group>"; };
+		B05C1FF51DD05AE100BDDCDB /* UITableViewCell+ForwordFriendsCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ForwordFriendsCircle.m"; sourceTree = "<group>"; };
 		B0B7818B1DCC253B00B1109D /* WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B7818E1DCC253B00B1109D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0B781901DCC253B00B1109D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				5AE3A4171DCEEBE0002A94C9 /* UIViewController+RedBag.m */,
 				5AE3A4201DCEFB87002A94C9 /* UIView+RedBag.h */,
 				5AE3A4211DCEFB87002A94C9 /* UIView+RedBag.m */,
+				B05C1FF41DD05AE100BDDCDB /* UITableViewCell+ForwordFriendsCircle.h */,
+				B05C1FF51DD05AE100BDDCDB /* UITableViewCell+ForwordFriendsCircle.m */,
 				B0B781A51DCC2C4000B1109D /* JRSwizzle.h */,
 				B0B781A61DCC2C4000B1109D /* JRSwizzle.m */,
 				C507B7071C9FD1E1008455DA /* Package */,
@@ -215,6 +221,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05C1FF61DD05AE100BDDCDB /* UITableViewCell+ForwordFriendsCircle.h in Headers */,
 				5AE3A4221DCEFB87002A94C9 /* UIView+RedBag.h in Headers */,
 				5AE3A4181DCEEBE0002A94C9 /* UIViewController+RedBag.h in Headers */,
 				B0B781AC1DCC2D3C00B1109D /* RedSettingViewController.h in Headers */,
@@ -363,6 +370,7 @@
 				5AE3A41D1DCEEC2B002A94C9 /* NSObject+RedBag.m in Sources */,
 				B0B781A81DCC2C4000B1109D /* JRSwizzle.m in Sources */,
 				5AE3A4231DCEFB87002A94C9 /* UIView+RedBag.m in Sources */,
+				B05C1FF71DD05AE100BDDCDB /* UITableViewCell+ForwordFriendsCircle.m in Sources */,
 				5AE3A4191DCEEBE0002A94C9 /* UIViewController+RedBag.m in Sources */,
 				B0B781AD1DCC2D3C00B1109D /* RedSettingViewController.m in Sources */,
 			);

@@ -16,37 +16,49 @@
 {
     if ([self isKindOfClass:NSClassFromString(@"SightMomentEditViewController")]) {
 
-        NSMutableArray *mArray = [NSMutableArray array];
-        [self setValue:mArray forKey:@"_arr_MentionContact"];
-        
-        __weak UIViewController *weakSelf = self;
-        [self.xy_dicInfo enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-            [weakSelf setValue:obj forKey:key];
-        }];
-        
-        [self xy_viewDidLoad];
-        
-        UITextView *textView = [self valueForKeyPath:@"_textView.textView"];
-        textView.text = self.xy_contenDes;
+        if (self.xy_dicInfo || self.xy_contenDes) {
+            
+            NSMutableArray *mArray = [NSMutableArray array];
+            [self setValue:mArray forKey:@"_arr_MentionContact"];
+            
+            __weak UIViewController *weakSelf = self;
+            [self.xy_dicInfo enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                [weakSelf setValue:obj forKey:key];
+            }];
+            
+            [self xy_viewDidLoad];
+            
+            UITextView *textView = [self valueForKeyPath:@"_textView"];
+            textView.text = self.xy_contenDes;
+            
+        } else {
+            [self xy_viewDidLoad];
+        }
         
         return;
     }
     
     if ([self isKindOfClass:NSClassFromString(@"WCNewCommitViewController")]) {
-        NSMutableArray *array = [NSMutableArray array];
-        [self setValue:array forKeyPath:@"_imageSelectorController.arrImages"];
-        for (UIImage *image in self.xy_images) {
-            Class class = objc_getClass("MMImage");
-            MMImage *mm = [[class alloc] initWithImage:image];
-            mm.imageFrom = 2;
-            [array addObject:mm];
+        
+        if (self.xy_images || self.xy_contenDes) {
+            
+            NSMutableArray *array = [NSMutableArray array];
+            [self setValue:array forKeyPath:@"_imageSelectorController.arrImages"];
+            for (UIImage *image in self.xy_images) {
+                Class class = objc_getClass("MMImage");
+                MMImage *mm = [[class alloc] initWithImage:image];
+                mm.imageFrom = 2;
+                [array addObject:mm];
+            }
+            
+            [self xy_viewDidLoad];
+            
+            UITextView *textView = [self valueForKeyPath:@"_textView"];
+            textView.text = self.xy_contenDes;
+        } else {
+            [self xy_viewDidLoad];
         }
-        
-        [self xy_viewDidLoad];
-        
-        UITextView *textView = [self valueForKeyPath:@"_textView.textView"];
-        textView.text = self.xy_contenDes;
-        
+
         return;
     }
 
