@@ -64,19 +64,6 @@
 - (id)getService:(Class)service;
 @end
 
-// @interface WCRedEnvelopesControlMgr : NSObject
-// - (unsigned int)startLogic:(id)arg1;
-// @end
-
-// @interface WCRedEnvelopesReceiveControlLogic : NSObject
-
-// - (id)initWithData:(id)arg1;
-
-// - (void)startLogic;
-
-// - (void)WCRedEnvelopesReceiveHomeViewOpenRedEnvelopes;
-
-// @end
 
 @interface WCRedEnvelopesLogicMgr: NSObject
 - (void)OpenRedEnvelopesRequest:(id)params;

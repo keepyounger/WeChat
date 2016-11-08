@@ -7,18 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface RedSettingViewController : UITableViewController
 
-+ (instancetype)sharedInstance;
++ (instancetype)defaultController;
 
-@property (nonatomic, strong) NSString *redState;
-@property (nonatomic, strong) NSString *selfState;
-@property (nonatomic, strong) NSString *selfSendGroupState;
-@property (nonatomic, strong) NSString *otherSendGroupState;
-@property (nonatomic, strong) NSString *delayRandomState;
-@property (nonatomic, strong) NSString *delayTime;
-
-@property (nonatomic, strong) NSString *revokeState;
-    
 @end

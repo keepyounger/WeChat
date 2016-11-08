@@ -67,12 +67,14 @@
         [self xy_viewDidLoad];
         
         UIViewController *vc = (UIViewController*)self;
-        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"红包设置" style:UIBarButtonItemStylePlain target:self action:@selector(xy_showRedSetting)];
+        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"扩展设置" style:UIBarButtonItemStylePlain target:self action:@selector(xy_showRedSetting)];
         [bbi setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
+        [bbi setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateHighlighted];
+        
         UIBarButtonItem *back = [[UIBarButtonItem alloc] init];
-        back.title = @"返回";
-        [back setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
+        back.title = @"";
         vc.navigationItem.backBarButtonItem = back;
+        
         vc.navigationItem.rightBarButtonItem = bbi;
         
         return;
@@ -94,7 +96,7 @@
 - (void)xy_showRedSetting
 {
     UIViewController *vc = (UIViewController*)self;
-    [vc.navigationController pushViewController:[RedSettingViewController sharedInstance] animated:YES];
+    [vc.navigationController pushViewController:[RedSettingViewController defaultController] animated:YES];
 }
 
 - (void)setXy_images:(NSArray<UIImage *> *)xy_images

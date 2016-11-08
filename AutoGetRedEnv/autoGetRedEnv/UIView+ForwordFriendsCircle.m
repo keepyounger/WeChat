@@ -6,7 +6,7 @@
 //
 //
 
-#import "UITableViewCell+ForwordFriendsCircle.h"
+#import "UIView+ForwordFriendsCircle.h"
 #import <objc/runtime.h>
 #import "UIViewController+RedBag.h"
 

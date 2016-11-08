@@ -8,8 +8,8 @@
 
 #import "NSObject+RedBag.h"
 #import "WeixinRequiredHeaders.h"
-#import "RedSettingViewController.h"
 #import <objc/runtime.h>
+#import "RedManager.h"
 
 @implementation NSObject (RedBag)
 - (void)xy_AsyncOnAddMsg:(id)arg1 MsgWrap:(id)arg2
@@ -29,26 +29,18 @@
                 isMesasgeFromMe = YES;
             }
             
-            BOOL isChatroom = NO;
-            if ([wrap.m_nsFromUsr rangeOfString:@"@chatroom"].location != NSNotFound)
-            {
-                isChatroom = YES;
-            }
+//            BOOL isChatroom = NO;
+//            if ([wrap.m_nsFromUsr rangeOfString:@"@chatroom"].location != NSNotFound)
+//            {
+//                isChatroom = YES;
+//            }
             
-            RedSettingViewController *manager = [RedSettingViewController sharedInstance];
+            RedManager *manager = [RedManager sharedManager];
             if (!manager.redState.boolValue) {
                 break;
             }
             
-            if (isMesasgeFromMe && !isChatroom && !manager.selfState.boolValue) {//自己发的红包
-                break;
-            }
-            
-            if (isMesasgeFromMe && isChatroom && !manager.selfSendGroupState.boolValue) {//自己发的群红包
-                break;
-            }
-            
-            if (!isMesasgeFromMe && isChatroom && !manager.otherSendGroupState.boolValue) {//别人发的群红包
+            if (isMesasgeFromMe && !manager.selfState.boolValue) {//自己发的红包
                 break;
             }
             
@@ -69,7 +61,7 @@
                 params[@"nativeUrl"] = [[wrap m_oWCPayInfoItem] m_c2cNativeUrl] ?: @"";
                 params[@"sessionUserName"] = wrap.m_nsFromUsr ?: @"";
                 
-                CGFloat time = manager.delayTime.floatValue;
+                float time = manager.delayTime.floatValue;
                 
                 if (manager.delayRandomState.boolValue) {
                     time = arc4random()%50/10.0;
@@ -94,7 +86,7 @@
 
 - (void)xy_onRevokeMsg:(id)arg1
 {
-    RedSettingViewController *manager = [RedSettingViewController sharedInstance];
+    RedManager *manager = [RedManager sharedManager];
     
     if (manager.revokeState.boolValue) {
         return;
