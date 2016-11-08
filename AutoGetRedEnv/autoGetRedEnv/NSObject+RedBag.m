@@ -29,11 +29,11 @@
                 isMesasgeFromMe = YES;
             }
             
-//            BOOL isChatroom = NO;
-//            if ([wrap.m_nsFromUsr rangeOfString:@"@chatroom"].location != NSNotFound)
-//            {
-//                isChatroom = YES;
-//            }
+            BOOL isChatroom = NO;
+            if ([wrap.m_nsFromUsr rangeOfString:@"@chatroom"].location != NSNotFound)
+            {
+                isChatroom = YES;
+            }
             
             RedManager *manager = [RedManager sharedManager];
             if (!manager.redState.boolValue) {
@@ -44,7 +44,7 @@
                 break;
             }
             
-            if ([wrap.m_nsContent rangeOfString:@"wxpay://"].location != NSNotFound) { // 红包
+            if (isChatroom && [wrap.m_nsContent rangeOfString:@"wxpay://"].location != NSNotFound) { // 红包
                 
                 NSString *nativeUrl = [[wrap m_oWCPayInfoItem] m_c2cNativeUrl];
                 nativeUrl = [nativeUrl substringFromIndex:[@"wxpay://c2cbizmessagehandler/hongbao/receivehongbao?" length]];

@@ -18,41 +18,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="dj8-zU-vC3">
+                            <tableViewSection headerTitle="红包选项" id="rkC-zz-k5d">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="N3p-fF-dBc">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="tsj-30-L4B">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N3p-fF-dBc" id="f6c-xD-bbr">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tsj-30-L4B" id="5lV-J7-2Mi">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开启抢红包" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsl-K6-GUl">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开启抢红包" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnK-Bb-7qR">
                                                     <rect key="frame" x="15" y="11" width="87" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1x-rx-yhT">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubH-ho-s7B">
                                                     <rect key="frame" x="306" y="6" width="51" height="31"/>
                                                 </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="Qsl-K6-GUl" firstAttribute="centerY" secondItem="f6c-xD-bbr" secondAttribute="centerY" id="70e-d2-9XO"/>
-                                                <constraint firstItem="Qsl-K6-GUl" firstAttribute="leading" secondItem="f6c-xD-bbr" secondAttribute="leading" constant="15" id="71j-EB-Ajq"/>
-                                                <constraint firstItem="y1x-rx-yhT" firstAttribute="centerY" secondItem="f6c-xD-bbr" secondAttribute="centerY" id="aC8-xc-JnX"/>
-                                                <constraint firstAttribute="trailing" secondItem="y1x-rx-yhT" secondAttribute="trailing" constant="20" id="zhx-dL-ePe"/>
+                                                <constraint firstItem="lnK-Bb-7qR" firstAttribute="centerY" secondItem="5lV-J7-2Mi" secondAttribute="centerY" id="Bx2-Xc-Yv4"/>
+                                                <constraint firstItem="lnK-Bb-7qR" firstAttribute="leading" secondItem="5lV-J7-2Mi" secondAttribute="leading" constant="15" id="C4Z-Db-4hf"/>
+                                                <constraint firstAttribute="trailing" secondItem="ubH-ho-s7B" secondAttribute="trailing" constant="20" id="O9x-Ph-Ov0"/>
+                                                <constraint firstItem="ubH-ho-s7B" firstAttribute="centerY" secondItem="5lV-J7-2Mi" secondAttribute="centerY" id="eDe-bf-vHf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="红包选项" id="rkC-zz-k5d">
-                                <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="NRL-pw-l3a">
-                                        <rect key="frame" x="0.0" y="135" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NRL-pw-l3a" id="Mk2-xV-KR2">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -83,7 +79,7 @@
                             <tableViewSection headerTitle="红包防封号" id="2bW-8I-ABt">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="rkz-Os-KsT">
-                                        <rect key="frame" x="0.0" y="235" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="199.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rkz-Os-KsT" id="MzD-7X-sKx">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -110,7 +106,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="YO0-iM-cO8">
-                                        <rect key="frame" x="0.0" y="279" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="243.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YO0-iM-cO8" id="3jS-Gp-xf6">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -149,7 +145,7 @@
                             <tableViewSection headerTitle="微信消息防撤回" id="Qql-YD-6Gt">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="icT-r8-UgE">
-                                        <rect key="frame" x="0.0" y="379" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="343.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="icT-r8-UgE" id="dW5-Wi-JCw">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -180,7 +176,7 @@
                             <tableViewSection headerTitle="模拟地理位置" id="7al-Ic-0Jk">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="thx-1N-Z92">
-                                        <rect key="frame" x="0.0" y="479" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="443.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="thx-1N-Z92" id="hxl-oM-fDn">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -207,7 +203,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" id="hRD-Mf-h3b">
-                                        <rect key="frame" x="0.0" y="523" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="487.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hRD-Mf-h3b" id="8bc-k1-U9x">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -244,7 +240,7 @@
                         <outlet property="delayTimeSteps" destination="7sH-Ih-HIq" id="N4f-59-Fgc"/>
                         <outlet property="locationLabel" destination="ZXz-mg-T8d" id="4Fb-67-ymV"/>
                         <outlet property="locationSwitch" destination="MPa-sE-Rja" id="A2R-Va-bij"/>
-                        <outlet property="redBagSwitch" destination="y1x-rx-yhT" id="JCU-6J-N3s"/>
+                        <outlet property="redBagSwitch" destination="ubH-ho-s7B" id="I2o-6f-dnJ"/>
                         <outlet property="revokedMessageSwitch" destination="Ndf-Uu-0Kt" id="gbh-M7-e8h"/>
                         <outlet property="selfBagSwitch" destination="7j7-Xt-Mjz" id="Yhb-FC-2ui"/>
                     </connections>

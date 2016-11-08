@@ -23,6 +23,8 @@
 		B070E9C41DD17D5600A56E85 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B070E9C31DD17D5600A56E85 /* CoreLocation.framework */; };
 		B070E9C71DD1AA9C00A56E85 /* RedManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B070E9C51DD1AA9C00A56E85 /* RedManager.h */; };
 		B070E9C81DD1AA9C00A56E85 /* RedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B070E9C61DD1AA9C00A56E85 /* RedManager.m */; };
+		B070E9CB1DD1C63800A56E85 /* UINavigationController+xyHook.h in Headers */ = {isa = PBXBuildFile; fileRef = B070E9C91DD1C63800A56E85 /* UINavigationController+xyHook.h */; };
+		B070E9CC1DD1C63800A56E85 /* UINavigationController+xyHook.m in Sources */ = {isa = PBXBuildFile; fileRef = B070E9CA1DD1C63800A56E85 /* UINavigationController+xyHook.m */; };
 		B0B7818F1DCC253B00B1109D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B7818E1DCC253B00B1109D /* main.m */; };
 		B0B781921DCC253B00B1109D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B781911DCC253B00B1109D /* AppDelegate.m */; };
 		B0B781951DCC253B00B1109D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B781941DCC253B00B1109D /* ViewController.m */; };
@@ -65,6 +67,8 @@
 		B070E9C31DD17D5600A56E85 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B070E9C51DD1AA9C00A56E85 /* RedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedManager.h; sourceTree = "<group>"; };
 		B070E9C61DD1AA9C00A56E85 /* RedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedManager.m; sourceTree = "<group>"; };
+		B070E9C91DD1C63800A56E85 /* UINavigationController+xyHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+xyHook.h"; sourceTree = "<group>"; };
+		B070E9CA1DD1C63800A56E85 /* UINavigationController+xyHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+xyHook.m"; sourceTree = "<group>"; };
 		B0B7818B1DCC253B00B1109D /* WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B7818E1DCC253B00B1109D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0B781901DCC253B00B1109D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				B070E9BC1DD1685E00A56E85 /* CLLocation+Simulation.m */,
 				B070E9BF1DD1770400A56E85 /* SelectionLocationViewController.h */,
 				B070E9C01DD1770400A56E85 /* SelectionLocationViewController.m */,
+				B070E9C91DD1C63800A56E85 /* UINavigationController+xyHook.h */,
+				B070E9CA1DD1C63800A56E85 /* UINavigationController+xyHook.m */,
 				B0B781A51DCC2C4000B1109D /* JRSwizzle.h */,
 				B0B781A61DCC2C4000B1109D /* JRSwizzle.m */,
 				C507B7071C9FD1E1008455DA /* Package */,
@@ -243,6 +249,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B070E9CB1DD1C63800A56E85 /* UINavigationController+xyHook.h in Headers */,
 				B05C1FF61DD05AE100BDDCDB /* UIView+ForwordFriendsCircle.h in Headers */,
 				5AE3A4221DCEFB87002A94C9 /* UIView+RedBag.h in Headers */,
 				B070E9C71DD1AA9C00A56E85 /* RedManager.h in Headers */,
@@ -399,6 +406,7 @@
 				5AE3A4191DCEEBE0002A94C9 /* UIViewController+RedBag.m in Sources */,
 				B070E9C81DD1AA9C00A56E85 /* RedManager.m in Sources */,
 				B0B781AD1DCC2D3C00B1109D /* RedSettingViewController.m in Sources */,
+				B070E9CC1DD1C63800A56E85 /* UINavigationController+xyHook.m in Sources */,
 				B070E9C21DD1770400A56E85 /* SelectionLocationViewController.m in Sources */,
 				B070E9BE1DD1685E00A56E85 /* CLLocation+Simulation.m in Sources */,
 			);
