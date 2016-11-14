@@ -91,12 +91,11 @@ static RedManager *_manager = nil;
         [class5 jr_swizzleMethod:@selector(popSelf) withMethod:@selector(xy_popSelf) error:nil];
         
         //MMFavCellComponent
-        Class class6 = objc_getClass("MMFavCellComponent");
-        [class6 jr_swizzleMethod:@selector(setFavItem:) withMethod:@selector(xy_setFavItem:) error:nil];
+        Class class6 = objc_getClass("SightView");
+        [class6 jr_swizzleMethod:@selector(didMoveToWindow) withMethod:@selector(xy_didMoveToWindow) error:nil];
         
         [CLLocation jr_swizzleMethod:@selector(coordinate) withMethod:@selector(xy_coordinate) error:nil];
         
-        //        [UINavigationController jr_swizzleMethod:@selector(pushViewController:animated:) withMethod:@selector(xy_pushViewController:animated:) error:nil];
     });
 }
 

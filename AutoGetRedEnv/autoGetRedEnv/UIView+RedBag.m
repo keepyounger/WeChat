@@ -81,7 +81,7 @@ static UIWindow *window = nil;
                 view.xy_images = array;
                 
                 UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:view];
-                [[self xy_navigationController] presentViewController:nav animated:YES completion:nil];
+                [[self xy_viewController] presentViewController:nav animated:YES completion:nil];
             });
             
         });
@@ -118,7 +118,7 @@ static UIWindow *window = nil;
                 view.xy_dicInfo = dic;
                 view.xy_contenDes = item.contentDesc;
                 
-                [[self xy_navigationController] presentViewController:view animated:YES completion:nil];
+                [[self xy_viewController] presentViewController:view animated:YES completion:nil];
                 
             });
         });
@@ -127,14 +127,14 @@ static UIWindow *window = nil;
 
 }
 
-- (UINavigationController *)xy_navigationController
+- (UIViewController *)xy_viewController
 {
-    UINavigationController *nav = nil;
+    UIViewController *vc = nil;
     UIResponder *rp = self;
     while (rp!=nil) {
-        if ([rp isKindOfClass:[UINavigationController class]]) {
-            nav = (UINavigationController*)rp;
-            return nav;
+        if ([rp isKindOfClass:[UIViewController class]]) {
+            vc = (UIViewController*)rp;
+            return vc;
         }
         rp = [rp nextResponder];
     }

@@ -14,8 +14,8 @@
 		5AE3A41F1DCEF3ED002A94C9 /* RedBag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE3A41E1DCEED48002A94C9 /* RedBag.storyboard */; };
 		5AE3A4221DCEFB87002A94C9 /* UIView+RedBag.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE3A4201DCEFB87002A94C9 /* UIView+RedBag.h */; };
 		5AE3A4231DCEFB87002A94C9 /* UIView+RedBag.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE3A4211DCEFB87002A94C9 /* UIView+RedBag.m */; };
-		B05C1FF61DD05AE100BDDCDB /* UIView+ForwordFriendsCircle.h in Headers */ = {isa = PBXBuildFile; fileRef = B05C1FF41DD05AE100BDDCDB /* UIView+ForwordFriendsCircle.h */; };
-		B05C1FF71DD05AE100BDDCDB /* UIView+ForwordFriendsCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = B05C1FF51DD05AE100BDDCDB /* UIView+ForwordFriendsCircle.m */; };
+		B056856E1DD959FE00D4AEE2 /* UIView+XY_SightView.h in Headers */ = {isa = PBXBuildFile; fileRef = B056856C1DD959FE00D4AEE2 /* UIView+XY_SightView.h */; };
+		B056856F1DD959FE00D4AEE2 /* UIView+XY_SightView.m in Sources */ = {isa = PBXBuildFile; fileRef = B056856D1DD959FE00D4AEE2 /* UIView+XY_SightView.m */; };
 		B070E9BD1DD1685E00A56E85 /* CLLocation+Simulation.h in Headers */ = {isa = PBXBuildFile; fileRef = B070E9BB1DD1685E00A56E85 /* CLLocation+Simulation.h */; };
 		B070E9BE1DD1685E00A56E85 /* CLLocation+Simulation.m in Sources */ = {isa = PBXBuildFile; fileRef = B070E9BC1DD1685E00A56E85 /* CLLocation+Simulation.m */; };
 		B070E9C11DD1770400A56E85 /* SelectionLocationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B070E9BF1DD1770400A56E85 /* SelectionLocationViewController.h */; };
@@ -58,8 +58,8 @@
 		5AE3A41E1DCEED48002A94C9 /* RedBag.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RedBag.storyboard; sourceTree = "<group>"; };
 		5AE3A4201DCEFB87002A94C9 /* UIView+RedBag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RedBag.h"; sourceTree = "<group>"; };
 		5AE3A4211DCEFB87002A94C9 /* UIView+RedBag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RedBag.m"; sourceTree = "<group>"; };
-		B05C1FF41DD05AE100BDDCDB /* UIView+ForwordFriendsCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ForwordFriendsCircle.h"; sourceTree = "<group>"; };
-		B05C1FF51DD05AE100BDDCDB /* UIView+ForwordFriendsCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ForwordFriendsCircle.m"; sourceTree = "<group>"; };
+		B056856C1DD959FE00D4AEE2 /* UIView+XY_SightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XY_SightView.h"; sourceTree = "<group>"; };
+		B056856D1DD959FE00D4AEE2 /* UIView+XY_SightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XY_SightView.m"; sourceTree = "<group>"; };
 		B070E9BB1DD1685E00A56E85 /* CLLocation+Simulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Simulation.h"; sourceTree = "<group>"; };
 		B070E9BC1DD1685E00A56E85 /* CLLocation+Simulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Simulation.m"; sourceTree = "<group>"; };
 		B070E9BF1DD1770400A56E85 /* SelectionLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionLocationViewController.h; sourceTree = "<group>"; };
@@ -183,8 +183,8 @@
 				5AE3A4171DCEEBE0002A94C9 /* UIViewController+RedBag.m */,
 				5AE3A4201DCEFB87002A94C9 /* UIView+RedBag.h */,
 				5AE3A4211DCEFB87002A94C9 /* UIView+RedBag.m */,
-				B05C1FF41DD05AE100BDDCDB /* UIView+ForwordFriendsCircle.h */,
-				B05C1FF51DD05AE100BDDCDB /* UIView+ForwordFriendsCircle.m */,
+				B056856C1DD959FE00D4AEE2 /* UIView+XY_SightView.h */,
+				B056856D1DD959FE00D4AEE2 /* UIView+XY_SightView.m */,
 				B070E9BB1DD1685E00A56E85 /* CLLocation+Simulation.h */,
 				B070E9BC1DD1685E00A56E85 /* CLLocation+Simulation.m */,
 				B070E9BF1DD1770400A56E85 /* SelectionLocationViewController.h */,
@@ -250,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B070E9CB1DD1C63800A56E85 /* UINavigationController+xyHook.h in Headers */,
-				B05C1FF61DD05AE100BDDCDB /* UIView+ForwordFriendsCircle.h in Headers */,
+				B056856E1DD959FE00D4AEE2 /* UIView+XY_SightView.h in Headers */,
 				5AE3A4221DCEFB87002A94C9 /* UIView+RedBag.h in Headers */,
 				B070E9C71DD1AA9C00A56E85 /* RedManager.h in Headers */,
 				B070E9C11DD1770400A56E85 /* SelectionLocationViewController.h in Headers */,
@@ -402,10 +402,10 @@
 				5AE3A41D1DCEEC2B002A94C9 /* NSObject+RedBag.m in Sources */,
 				B0B781A81DCC2C4000B1109D /* JRSwizzle.m in Sources */,
 				5AE3A4231DCEFB87002A94C9 /* UIView+RedBag.m in Sources */,
-				B05C1FF71DD05AE100BDDCDB /* UIView+ForwordFriendsCircle.m in Sources */,
 				5AE3A4191DCEEBE0002A94C9 /* UIViewController+RedBag.m in Sources */,
 				B070E9C81DD1AA9C00A56E85 /* RedManager.m in Sources */,
 				B0B781AD1DCC2D3C00B1109D /* RedSettingViewController.m in Sources */,
+				B056856F1DD959FE00D4AEE2 /* UIView+XY_SightView.m in Sources */,
 				B070E9CC1DD1C63800A56E85 /* UINavigationController+xyHook.m in Sources */,
 				B070E9C21DD1770400A56E85 /* SelectionLocationViewController.m in Sources */,
 				B070E9BE1DD1685E00A56E85 /* CLLocation+Simulation.m in Sources */,
