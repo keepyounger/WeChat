@@ -313,8 +313,7 @@
 				TargetAttributes = {
 					B0B7818A1DCC253B00B1109D = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = L7P3DYSB6A;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					C507B6FE1C9FD1E1008455DA = {
 						CreatedOnToolsVersion = 7.2;
@@ -467,7 +466,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = L7P3DYSB6A;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -481,8 +480,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ifang.wechat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifang.WeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "58ee4bee-59cb-4309-93eb-7167b07f55c0";
 				VALID_ARCHS = arm64;
 			};
 			name = Debug;
@@ -513,7 +513,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = L7P3DYSB6A;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -526,7 +526,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ifang.wechat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifang.WeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = arm64;
 			};

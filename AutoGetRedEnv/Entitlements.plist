@@ -2,15 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>application-identifier</key>
-  <string>L7P3DYSB6A.com.ifang.wechat</string>
-  <key>com.apple.developer.team-identifier</key>
-  <string>L7P3DYSB6A</string>
-  <key>get-task-allow</key>
-  <true/>
-  <key>keychain-access-groups</key>
-  <array>
-      <string>L7P3DYSB6A.com.ifang.wechat</string>
-  </array>
+	<key>application-identifier</key>
+	<string>L7P3DYSB6A.com.ifang.WeChat</string>
+	<key>com.apple.developer.team-identifier</key>
+	<string>L7P3DYSB6A</string>
+	<key>get-task-allow</key>
+    <true/>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>L7P3DYSB6A.com.ifang.WeChat</string>
+	</array>
 </dict>
 </plist>
