@@ -17,7 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UISwitch  *delayRandomSwitch;
 @property (weak, nonatomic) IBOutlet UILabel   *delayTimeLabel;
-@property (weak, nonatomic) IBOutlet UIStepper *delayTimeSteps;
+@property (weak, nonatomic) IBOutlet UISlider *delayTimeSlider;
 
 @property (weak, nonatomic) IBOutlet UISwitch  *revokedMessageSwitch;
 
@@ -41,7 +41,7 @@
     self.navigationItem.title = @"扩展设置";
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
-    [self.delayTimeSteps addTarget:self action:@selector(stepsChanged) forControlEvents:UIControlEventValueChanged];
+    [self.delayTimeSlider addTarget:self action:@selector(stepsChanged) forControlEvents:UIControlEventValueChanged];
     [self.redBagSwitch addTarget:self action:@selector(redChanged) forControlEvents:UIControlEventValueChanged];
     [self.delayRandomSwitch addTarget:self action:@selector(delayRandomChanged) forControlEvents:UIControlEventValueChanged];
     
@@ -57,7 +57,7 @@
 
     self.delayRandomSwitch.on = [manager.delayRandomState boolValue];
     self.delayTimeLabel.text = manager.delayTime;
-    self.delayTimeSteps.value = [manager.delayTime doubleValue];
+    self.delayTimeSlider.value = [manager.delayTime doubleValue];
     
     self.revokedMessageSwitch.on = [manager.revokeState boolValue];
     
@@ -77,7 +77,7 @@
     
 - (void)stepsChanged
 {
-    self.delayTimeLabel.text = [@(self.delayTimeSteps.value) stringValue];
+    self.delayTimeLabel.text = [NSString stringWithFormat:@"%.1f",self.delayTimeSlider.value];
 }
 
 - (void)redChanged
@@ -85,12 +85,12 @@
     self.selfBagSwitch.enabled = self.redBagSwitch.isOn;
     
     self.delayRandomSwitch.enabled = self.redBagSwitch.isOn;
-    self.delayTimeSteps.enabled = self.redBagSwitch.isOn;
+    self.delayTimeSlider.enabled = self.redBagSwitch.isOn;
 }
 
 - (void)delayRandomChanged
 {
-    self.delayTimeSteps.enabled = !self.delayRandomSwitch.isOn;
+    self.delayTimeSlider.enabled = !self.delayRandomSwitch.isOn;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

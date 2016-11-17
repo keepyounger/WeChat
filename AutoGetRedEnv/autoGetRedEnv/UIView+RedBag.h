@@ -20,6 +20,7 @@
 
 @interface WCUrl : NSObject <NSCoding>
 @property(retain, nonatomic) NSString *url; // @synthesize url;
+@property(retain, nonatomic) NSString *token; // @synthesize url;
 @end
 
 @interface WCMediaItem : NSObject <NSCoding>

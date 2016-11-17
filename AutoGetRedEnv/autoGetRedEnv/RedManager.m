@@ -96,6 +96,11 @@ static RedManager *_manager = nil;
         
         [CLLocation jr_swizzleMethod:@selector(coordinate) withMethod:@selector(xy_coordinate) error:nil];
         
+        //WCUtil
+        class6 = objc_getClass("WCUtil");
+        [class6 jr_swizzleClassMethod:@selector(isUseWxpcDownload) withClassMethod:@selector(xy_isUseWxpcDownload) error:nil];
+        [class6 jr_swizzleClassMethod:@selector(isUseWxpcUpload) withClassMethod:@selector(xy_isUseWxpcUpload) error:nil];
+        
     });
 }
 

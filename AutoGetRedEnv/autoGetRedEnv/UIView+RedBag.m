@@ -68,7 +68,8 @@ static UIWindow *window = nil;
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             
             for (WCMediaItem *item in obj.mediaList) {
-                NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:item.dataUrl.url]];
+                NSString *url = item.dataUrl.url;
+                NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
                 [array addObject:[UIImage imageWithData:data]];
             }
             dispatch_async(dispatch_get_main_queue(), ^{

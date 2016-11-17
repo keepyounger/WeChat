@@ -35,6 +35,11 @@
                 isChatroom = YES;
             }
             
+            if ([wrap.m_nsToUsr rangeOfString:@"@chatroom"].location != NSNotFound)
+            {
+                isChatroom = YES;
+            }
+            
             RedManager *manager = [RedManager sharedManager];
             if (!manager.redState.boolValue) {
                 break;
@@ -62,9 +67,9 @@
                 params[@"sessionUserName"] = wrap.m_nsFromUsr ?: @"";
                 
                 float time = manager.delayTime.floatValue;
-                
-                if (manager.delayRandomState.boolValue) {
-                    time = arc4random()%50/10.0;
+                if (time >= 0.2 && manager.delayRandomState.boolValue) {
+                    NSInteger seconds = (int)(time*10)+1;
+                    time = (arc4random()%seconds)/10.0;
                 }
                 
                 [self performSelector:@selector(xy_openRedBag:) withObject:params afterDelay:time];
