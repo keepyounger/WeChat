@@ -81,9 +81,14 @@ static UIWindow *window = nil;
                 WCImageFullScreenViewContainer *view = [[class alloc] init];
                 view.m_mediaData = item;
                 [view tryDownloadImage];
-                while (![[view valueForKey:@"m_isImageReady"] boolValue]) {
-                    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate distantFuture]];
+                int time = 0;
+                
+                //超时20s
+                while (time<=20 && ![[view valueForKey:@"m_isImageReady"] boolValue]) {
+                    time++;
+                    [NSThread sleepForTimeInterval:1];
                 }
+                
                 if (view.m_image) {
                     [array addObject:view.m_image];
                 }
