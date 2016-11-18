@@ -41,3 +41,18 @@
 @property(retain, nonatomic) NSString *nickname; // @synthesize nickname;
 @property(retain, nonatomic) NSString *username; // @synthesize username;
 @end
+
+@interface WCImageView : NSObject <NSCoding>
+- (void)initData:(id)arg1 imageType:(int)arg2 precedentImageType:(int)arg3;
+- (id)initWithMediaData:(id)arg1 imageType:(int)arg2 precedentImageType:(int)arg3;
+- (id)initWithMediaData:(id)arg1 imageType:(int)arg2;
+- (id)getImage;
+@end
+
+@interface WCImageFullScreenViewContainer : NSObject
+@property(retain, nonatomic) WCMediaItem *m_mediaData; // @synthesize m_mediaData;
+@property(retain, nonatomic) UIImage *m_image; // @synthesize m_image;
+- (void)tryDownloadImage;
+- (void)startLoadingBlocked;
+- (void)startLoadingNonBlock;
+@end

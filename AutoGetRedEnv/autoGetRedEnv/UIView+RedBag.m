@@ -66,11 +66,27 @@ static UIWindow *window = nil;
         NSMutableArray *array = [NSMutableArray array];
         
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            
+            //http://[::ffff:111.161.111.114]/mmsns/7CdXdIPctJnqvyQpX966DwpXSZTFWq0EvaZBDpkRLQ7VTUyNJIDIrsDVcXGLKIuMDFaicwdOJBpM/0?tp=wxpc&length=2208&width=1242&idx=1&token=WSEN6qDsKwV8A02w3onOGQYfxnkibdqSOkmHhZGNB4DHDxA720PoFWyeL7MQcY5ov6NAWQy0ZzoUD236JSrf0qA
             for (WCMediaItem *item in obj.mediaList) {
-                NSString *url = item.dataUrl.url;
-                NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-                [array addObject:[UIImage imageWithData:data]];
+//                NSString *url = item.dataUrl.url;
+//                NSString *url = [NSString stringWithFormat:@"%@?tp=wxpc&length=2208&width=1242&idx=1&token=%@", item.dataUrl.url, item.dataUrl.token];
+//                NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+                //WCImageView
+//                Class class = objc_getClass("WCImageView");
+//                WCImageView *view = [[class alloc] initWithMediaData:item imageType:1];
+//                [array addObject:[view getImage]];
+//                
+                //
+                Class class = objc_getClass("WCImageFullScreenViewContainer");
+                WCImageFullScreenViewContainer *view = [[class alloc] init];
+                view.m_mediaData = item;
+                [view tryDownloadImage];
+                while (![[view valueForKey:@"m_isImageReady"] boolValue]) {
+                    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate distantFuture]];
+                }
+                if (view.m_image) {
+                    [array addObject:view.m_image];
+                }
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -143,3 +159,35 @@ static UIWindow *window = nil;
 }
 
 @end
+
+//@implementation NSObject (xxxxx)
+//
+//- (id)xy_initWithMediaData:(id)arg1 imageType:(int)arg2 isGridPreviewImg:(BOOL)arg3
+//{
+//    id obj = [self xy_initWithMediaData:arg1 imageType:arg2 isGridPreviewImg:arg3];
+//    return obj;
+//}
+//
+//- (id)xy_initWithMediaData:(id)arg1 imageType:(int)arg2 precedentImageType:(int)arg3
+//{
+//    id obj = [self xy_initWithMediaData:arg1 imageType:arg2 precedentImageType:arg3];
+//    return obj;
+//}
+//
+//- (id)xy_initWithMediaData:(id)arg1 imageType:(int)arg2
+//{
+//    id obj = [self xy_initWithMediaData:arg1 imageType:arg2];
+//    return obj;
+//}
+//
+//
+//@end
+
+//@implementation UIView (xxxxx)
+//
+//- (void)xy_onDownloadMediaProcessChange:(id)arg1 downloadType:(int)arg2 current:(int)arg3 total:(int)arg4
+//{
+//    [self xy_onDownloadMediaProcessChange:arg1 downloadType:arg2 current:arg3 total:arg4];
+//}
+//
+//@end

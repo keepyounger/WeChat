@@ -94,12 +94,16 @@ static RedManager *_manager = nil;
         Class class6 = objc_getClass("SightView");
         [class6 jr_swizzleMethod:@selector(didMoveToWindow) withMethod:@selector(xy_didMoveToWindow) error:nil];
         
-        [CLLocation jr_swizzleMethod:@selector(coordinate) withMethod:@selector(xy_coordinate) error:nil];
+//        class6 = objc_getClass("WCImageView");
+//        [class6 jr_swizzleMethod:@selector(initWithMediaData:imageType:isGridPreviewImg:) withMethod:@selector(xy_initWithMediaData:imageType:isGridPreviewImg:) error:nil];
+//        [class6 jr_swizzleMethod:@selector(initWithMediaData:imageType:precedentImageType:) withMethod:@selector(xy_initWithMediaData:imageType:precedentImageType:) error:nil];
+//        [class6 jr_swizzleMethod:@selector(initWithMediaData:imageType:) withMethod:@selector(xy_initWithMediaData:imageType:) error:nil];
         
-        //WCUtil
-        class6 = objc_getClass("WCUtil");
-        [class6 jr_swizzleClassMethod:@selector(isUseWxpcDownload) withClassMethod:@selector(xy_isUseWxpcDownload) error:nil];
-        [class6 jr_swizzleClassMethod:@selector(isUseWxpcUpload) withClassMethod:@selector(xy_isUseWxpcUpload) error:nil];
+        //onDownloadMediaProcessChange:(id)arg1 downloadType:(int)arg2 current:(int)arg3 total
+//        class6 = objc_getClass("WCImageFullScreenViewContainer");
+//        [class6 jr_swizzleMethod:@selector(onDownloadMediaProcessChange:downloadType:current:total:) withMethod:@selector(xy_onDownloadMediaProcessChange:downloadType:current:total:) error:nil];
+        
+        [CLLocation jr_swizzleMethod:@selector(coordinate) withMethod:@selector(xy_coordinate) error:nil];
         
     });
 }
