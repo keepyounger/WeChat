@@ -66,17 +66,9 @@ static UIWindow *window = nil;
         NSMutableArray *array = [NSMutableArray array];
         
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            //http://[::ffff:111.161.111.114]/mmsns/7CdXdIPctJnqvyQpX966DwpXSZTFWq0EvaZBDpkRLQ7VTUyNJIDIrsDVcXGLKIuMDFaicwdOJBpM/0?tp=wxpc&length=2208&width=1242&idx=1&token=WSEN6qDsKwV8A02w3onOGQYfxnkibdqSOkmHhZGNB4DHDxA720PoFWyeL7MQcY5ov6NAWQy0ZzoUD236JSrf0qA
             for (WCMediaItem *item in obj.mediaList) {
-//                NSString *url = item.dataUrl.url;
-//                NSString *url = [NSString stringWithFormat:@"%@?tp=wxpc&length=2208&width=1242&idx=1&token=%@", item.dataUrl.url, item.dataUrl.token];
-//                NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-                //WCImageView
-//                Class class = objc_getClass("WCImageView");
-//                WCImageView *view = [[class alloc] initWithMediaData:item imageType:1];
-//                [array addObject:[view getImage]];
-//                
-                //
+
+                //获取图片
                 Class class = objc_getClass("WCImageFullScreenViewContainer");
                 WCImageFullScreenViewContainer *view = [[class alloc] init];
                 view.m_mediaData = item;

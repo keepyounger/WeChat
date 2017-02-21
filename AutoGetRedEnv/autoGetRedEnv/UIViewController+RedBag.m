@@ -44,10 +44,16 @@
             
             NSMutableArray *array = [NSMutableArray array];
             [self setValue:array forKeyPath:@"_imageSelectorController.arrImages"];
+            [self setValue:@1 forKeyPath:@"_imageSelectorController.type"];
+            [self setValue:@YES forKey:@"m_isUseMMAsset"];
+            [self setValue:@1 forKey:@"_type"];
+            
             for (UIImage *image in self.xy_images) {
                 Class class = objc_getClass("MMImage");
                 MMImage *mm = [[class alloc] initWithImage:image];
-                mm.imageFrom = 2;
+                mm.imageFrom = 3;//3 相册 4照相机
+                mm.m_processState = 4;
+                [mm setValue:@1 forKey:@"_sourceForSNSUploadStat"];
                 [array addObject:mm];
             }
             

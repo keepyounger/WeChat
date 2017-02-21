@@ -25,6 +25,7 @@
 
 @property(nonatomic) int imageFrom; // @synthesize imageFrom=_imageFrom;
 @property(nonatomic) int mattID; // @synthesize mattID=_mattID;
+@property(nonatomic) int m_processState;
 - (id)initWithImage:(id)arg1;
 
 @end

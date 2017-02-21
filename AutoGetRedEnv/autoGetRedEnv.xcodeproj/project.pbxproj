@@ -314,7 +314,7 @@
 					B0B7818A1DCC253B00B1109D = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = L7P3DYSB6A;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					C507B6FE1C9FD1E1008455DA = {
 						CreatedOnToolsVersion = 7.2;
@@ -367,7 +367,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\nrm -rf WeChat.app/libautoGetRedEnv.dylib\nmv LatestBuild/libautoGetRedEnv.dylib WeChat.app/\nrm -rf WeChat.app/RedBag.storyboardc\nmv LatestBuild/WeChat.app/RedBag.storyboardc WeChat.app/\n\ncodesign -f -s \"iPhone Developer: Yong Zhao (AMVQL6FDP5)\" WeChat.app/libautoGetRedEnv.dylib\n#codesign -f -s \"iPhone Developer: Yong Zhao (AMVQL6FDP5)\" WeChat.app/Watch/WeChatWatchNative.app/PlugIns/WeChatWatchNativeExtension.appex\n#codesign -f -s \"iPhone Developer: Yong Zhao (AMVQL6FDP5)\" WeChat.app/Watch/WeChatWatchNative.app\ncodesign -f -s \"iPhone Developer: Yong Zhao (AMVQL6FDP5)\" WeChat.app/PlugIns/WeChatShareExtensionNew.appex\ncodesign -f -s \"iPhone Developer: Yong Zhao (AMVQL6FDP5)\" --entitlements Entitlements.plist WeChat.app\n\nrm -rf LatestBuild/WeChat.app\ncp -R WeChat.app LatestBuild/";
+			shellScript = "#def var\nAPPNAME=${TARGET_NAME}\nLIBNAME=\"libautoGetRedEnv\"\nIDENTIFIER=${PRODUCT_BUNDLE_IDENTIFIER}\nSTORYBOARD=\"RedBag\"\n\n#replace sign\nplutil -replace application-identifier -string L7P3DYSB6A.${IDENTIFIER} Entitlements.plist\nplutil -replace keychain-access-groups -xml \"<array><string>L7P3DYSB6A.\"${IDENTIFIER}\"</string></array>\" Entitlements.plist\nrm -rf ${APPNAME}.app/embedded.mobileprovision\ncp LatestBuild/${APPNAME}.app/embedded.mobileprovision ${APPNAME}.app/\n\n#insertlib\nrm -rf ${APPNAME}.app/${LIBNAME}.dylib\nmv LatestBuild/${LIBNAME}.dylib ${APPNAME}.app/\n\n#storyboard\nrm -rf ${APPNAME}.app/${STORYBOARD}.storyboardc\nmv LatestBuild/${APPNAME}.app/${STORYBOARD}.storyboardc ${APPNAME}.app/\n\n#codesign\ncodesign -f -s \"iPhone Developer: Yong Zhao (AMVQL6FDP5)\" WeChat.app/libautoGetRedEnv.dylib\ncodesign -f -s \"iPhone Developer: Yong Zhao (AMVQL6FDP5)\" --entitlements Entitlements.plist WeChat.app\n\n#instead of app\nrm -rf LatestBuild/${APPNAME}.app\ncp -R ${APPNAME}.app LatestBuild/";
 		};
 		C507B6FD1C9FD1E1008455DA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -483,8 +483,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ifang.WeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5a6a774e-3654-4425-aae2-3559af7258ae";
-				PROVISIONING_PROFILE_SPECIFIER = WeChatDev;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VALID_ARCHS = arm64;
 			};
 			name = Debug;
@@ -515,7 +515,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L7P3DYSB6A;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -530,6 +530,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ifang.WeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VALID_ARCHS = arm64;
 			};
 			name = Release;

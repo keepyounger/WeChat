@@ -7,7 +7,7 @@
 	<key>com.apple.developer.team-identifier</key>
 	<string>L7P3DYSB6A</string>
 	<key>get-task-allow</key>
-    <true/>
+	<true/>
 	<key>keychain-access-groups</key>
 	<array>
 		<string>L7P3DYSB6A.com.ifang.WeChat</string>
